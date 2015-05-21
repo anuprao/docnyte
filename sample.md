@@ -1,10 +1,24 @@
 # An exhibit of Markdown
 
+--floatright-start--
+
+### A float on the right
+
+info 1
+
+info 2
+
+info 3
+
+info 4
+
+--floatright-end--
+
 ![Sample Image](imagesample.png)
 
 This note demonstrates some of what [Markdown][1] is capable of doing.
 
-*Note: Feel free to play with this page. Unlike regular notes, this doesn't automatically save itself.*
+*Note: Feel free to play with this page. Unlike regular notes, this doesn't automatically save itself. I am just trying to make this line long enough to wrap around the edges and look at the behaviour of the float beside it.*
 
 ## Basic formatting
 
@@ -22,6 +36,16 @@ Paragraphs must be separated by a blank line. Basic formatting of *italics* and 
 4. and what else
 
 *Note: the fourth item uses the Unicode character for [Roman numeral four][2].*
+
+### Not A float
+
+info 1
+
+info 2
+
+info 3
+
+info 4
 
 ### Unordered list
 

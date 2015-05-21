@@ -1,10 +1,16 @@
+import sys
 import codecs
 
 import markdown
 from markdown.preprocessors import Preprocessor
 from jinja2 import Template
 
-fpMD = codecs.open("sample.md","r", "utf-8")
+if 2 > len(sys.argv) :
+	print "Usage syntax : docnyte input_file"
+	
+# print sys.argv
+
+fpMD = codecs.open(sys.argv[1],"r", "utf-8")
 strMarkDown = fpMD.read()
 fpMD.close()
 
@@ -14,7 +20,7 @@ fpTemplate.close()
 
 oTemplate = Template(strTemplate)
 
-mdProcessor = markdown.Markdown(output_format="html5", extensions=['extra','codehilite', 'myextension'])
+mdProcessor = markdown.Markdown(output_format="html5", extensions=['extra','codehilite', 'myextension', 'floatright'])
 html_md = mdProcessor.convert(strMarkDown)
 htmltext = oTemplate.render(markdown_content=html_md)
 

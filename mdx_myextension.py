@@ -9,6 +9,8 @@ class MyPreprocessor(Preprocessor):
 	def run(self,lines):
 		global pattern
 		
+		print "running through page-breaks"
+		
 		new_lines = []
 		
 		for line in lines:

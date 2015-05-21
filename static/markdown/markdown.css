@@ -461,13 +461,21 @@ html {
 		size:8.27in 11.69in; 
 	}
 
-	@page :left {
-		margin: 0.5cm;
+	@page :top {
+		margin: 1.0cm;
 	}
 
 	@page :right {
-		margin: 0.5cm;
+		margin: 1.0cm;
 	}
+	
+	@page :bottom {
+		margin: 1.0cm;
+	}
+
+	@page :left {
+		margin: 1.0cm;
+	}	
 	
 	html {
 	  font-family: my-open-sans; 

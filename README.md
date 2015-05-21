@@ -2,6 +2,11 @@
 
 A simple python based markdown processor to generate documents.
 
+## Credits
+
+The 'OpenSans' Team,
+PhantomJS, and
+Python Devs especally Markdown.
 
 ## Usage
 
