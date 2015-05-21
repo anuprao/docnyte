@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wiki</title>
+		
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!--
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		-->
+		
+		<link rel="stylesheet" href="static/markdown/markdown.css" />
+		
+		<link rel="stylesheet" href="static/pygments/bw.css">
+		
+		<!--
+		<script type="text/javascript" src="static/mathjax/MathJax.js?config=AM_HTMLorMML-full"></script>
+		-->
+		
+		<style TYPE="text/css">
+			body {
+				background: white;
+			}
+			
+			p.pagebreakhere {
+				page-break-before: always
+			}			
+		</style>
+				
+	</head>
+	<body>
+		<noscript><h3>This page requires Javascript!</h3></noscript>
+		
+		<script language="javascript" type="text/javascript">
+		</script>
+	
+		<h1>An exhibit of Markdown</h1>
+<p><img alt="Sample Image" src="imagesample.png"></p>
+<p>This note demonstrates some of what <a href="http://daringfireball.net/projects/markdown/">Markdown</a> is capable of doing.</p>
+<p><em>Note: Feel free to play with this page. Unlike regular notes, this doesn't automatically save itself.</em></p>
+<h2>Basic formatting</h2>
+<p>Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.</p>
+<p>Paragraphs must be separated by a blank line. Basic formatting of <em>italics</em> and <strong>bold</strong> is supported. This <em>can be <strong>nested</strong> like</em> so.</p>
+<h2>Lists</h2>
+<h3>Ordered list</h3>
+<ol>
+<li>Item 1</li>
+<li>A second item</li>
+<li>Number 3</li>
+<li>and what else</li>
+</ol>
+<p><em>Note: the fourth item uses the Unicode character for <a href="http://www.fileformat.info/info/unicode/char/2163/index.htm">Roman numeral four</a>.</em></p>
+<h3>Unordered list</h3>
+<ul>
+<li>An item</li>
+<li>Another item</li>
+<li>Yet another item</li>
+<li>And there's more...</li>
+</ul>
+<p class="pagebreakhere"></p>
+
+<p><strong>Python</strong> looks like this</p>
+<div class="codehilite"><pre><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">functionName</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">myclass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="s">&quot;Python syntax highlighting&quot;</span>
+<span class="k">print</span> <span class="n">s</span>
+</pre></div>
+
+
+<p>And <strong>C</strong> looks like this</p>
+<div class="codehilite"><pre><span class="cp">#include&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2>Paragraph modifiers</h2>
+<h3>Code block</h3>
+<div class="codehilite"><pre><span class="n">Code</span> <span class="n">blocks</span> <span class="n">are</span> <span class="n">very</span> <span class="n">useful</span> <span class="k">for</span> <span class="n">developers</span> <span class="n">and</span> <span class="n">other</span> <span class="n">people</span> <span class="n">who</span> <span class="n">look</span> <span class="n">at</span> <span class="n">code</span> <span class="n">or</span> <span class="n">other</span> <span class="n">things</span> <span class="n">that</span> <span class="n">are</span> <span class="n">written</span> <span class="n">in</span> <span class="n">plain</span> <span class="n">text</span><span class="p">.</span> <span class="n">As</span> <span class="n">you</span> <span class="n">can</span> <span class="n">see</span><span class="p">,</span> <span class="n">it</span> <span class="n">uses</span> <span class="n">a</span> <span class="n">fixed</span><span class="o">-</span><span class="n">width</span> <span class="n">font</span><span class="p">.</span>
+</pre></div>
+
+
+<p>You can also make <code>inline code</code> to add code into other things.</p>
+<h3>Quote</h3>
+<blockquote>
+<p>Here is a quote. What this is should be self explanatory. Quotes are automatically indented when they are used.</p>
+</blockquote>
+<h2>Headings</h2>
+<p>There are six levels of headings. They correspond with the six levels of HTML headings. You've probably noticed them already in the page. Each level down uses one more hash character.</p>
+<h3>Headings <em>can</em> also contain <strong>formatting</strong></h3>
+<h3>They can even contain <code>inline code</code></h3>
+<p>Of course, demonstrating what headings look like messes up the structure of the page.</p>
+<p>I don't recommend using more than three or four levels of headings here, because, when you're smallest heading isn't too small, and you're largest heading isn't too big, and you want each size up to look noticeably larger and more important, there there are only so many sizes that you can use.</p>
+<h2>URLs</h2>
+<p>URLs can be made in a handful of ways:</p>
+<ul>
+<li>A named link to <a href="http://www.markitdown.net/">MarkItDown</a>. The easiest way to do these is to select what you want to make a link and hit <code>Ctrl+L</code>.</li>
+<li>Another named link to <a href="http://www.markitdown.net/">MarkItDown</a></li>
+<li>Sometimes you just want a URL like <a href="http://www.markitdown.net/">http://www.markitdown.net/</a>.</li>
+</ul>
+<h2>Horizontal rule</h2>
+<p>A horizontal rule is a line that goes across the middle of the page.</p>
+<hr>
+<p>It's sometimes handy for breaking things up.</p>
+<h2>Images</h2>
+<p>Markdown can also contain images. I'll need to add something here sometime.</p>
+<h2>Finally</h2>
+<p>There's actually a lot more to Markdown than this. See the official <a href="http://daringfireball.net/projects/markdown/basics">introduction</a> and <a href="http://daringfireball.net/projects/markdown/syntax">syntax</a> for more information. However, be aware that this is not using the official implementation, and this might work subtly differently in some of the little things.</p>
+				
+	</body>
+</html>

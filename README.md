@@ -2,4 +2,9 @@
 
 A simple python based markdown processor to generate documents.
 
-Written as part of 24 hour coding self contest
+
+## Usage
+
+>$ docnyte -i resume.md -t pdf -o resume.pdf
+
+

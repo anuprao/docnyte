@@ -1,0 +1,632 @@
+/* 
+ * Copyright 2013 Alex Pacini.
+ * Modified for docnyte by Anup Jayapal Rao <anup.kadam@gmail.com>
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Some content is copyrighted by Twitter, Inc., and also released under an
+ * Apache License; these sections are noted in the source.
+ * 
+ * The CSS is based on this template:
+ * http://kevinburke.bitbucket.org/markdowncss/
+ *[(Copyright 2011 Kevin Burke unless otherwise noted.
+ * Licensed under the Apache License, Version 2.0 (the "License");]
+ * Then it was extended to cover the Markdown Extra and applied some light changes.
+ */
+
+@font-face
+{
+	font-family: 'my-open-sans';
+	src:	url('../font/open-sans/Light/OpenSans-Light.eot') format('eot'),
+			url('../font/open-sans/Light/OpenSans-Light.woff') format('woff'),
+			url('../font/open-sans/Light/OpenSans-Light.ttf') format('ttf'),
+			url('../font/open-sans/Light/OpenSans-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;					
+}
+
+@font-face
+{
+	font-family: 'my-open-sans';
+	src:	url('../font/open-sans/LightItalic/OpenSans-LightItalic.eot') format('eot'),
+			url('../font/open-sans/LightItalic/OpenSans-LightItalic.woff') format('woff'),
+			url('../font/open-sans/LightItalic/OpenSans-LightItalic.ttf') format('ttf'),
+			url('../font/open-sans/LightItalic/OpenSans-LightItalic.svg') format('svg');		
+	font-weight: normal; 
+	font-style: italic;
+
+}
+
+html {
+	font-family: my-open-sans;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+@media screen {
+	html {
+		font-family: my-open-sans;
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+	}
+	
+	body {
+		margin: 0px;
+		color: #444444;
+		font-family: my-open-sans;
+		font-size: 10px;
+		line-height: 1;
+		max-width: 960px;
+		padding: 30px;
+	}
+	
+	h1, h2, h3, h4 {
+		color: #111111;
+		font-weight: 400;
+	}
+	
+	h1, h2, h3, h4, h5, p {
+		margin-bottom: 20px;
+		padding: 0;
+	}
+	
+	h1, h2, h3, h4, h5 {
+		font-weight: bold;
+	}
+	
+	h1 {
+		font-size: 20px;
+	}
+	
+	h2 {
+		font-size: 18px;
+		margin: 20px 0 6px;
+	}
+	
+	h3 {
+		font-size: 16px;
+	}
+	
+	h4 {
+		font-size: 14px;
+	}
+	
+	h5 {
+		font-size: 12px;
+	}
+	
+	a {
+		color: #0099ff;
+		margin: 0;
+		padding: 0;
+		vertical-align: baseline;
+		text-decoration: none;
+	}
+	
+	img[alt=banner] {
+		width: 100%;
+		height: 100%;
+		margin-left: -10%;
+	}
+	
+	a:hover {
+		text-decoration: none;
+		color: #ff6600;
+	}
+	
+	a:visited {
+		color: purple;
+		text-decoration: none;
+	}
+	
+	ul, ol {
+		padding: 0;
+		margin-left: 32px;
+	}
+	
+	li {
+		line-height: 20px;
+	}
+	
+	li ul, li ol {
+		margin-left: 24px;
+	}
+	
+	p, ul, ol {
+		font-size: 12px;
+		line-height: 16px;
+		max-width: 100%;
+	}
+	
+	pre {
+		border-radius: 4px;
+		padding: 10px 24px;
+		max-width: 100%;
+		white-space: pre-wrap;
+	}
+	
+	code {	
+		background-color: #f7f7f7;
+		border-left: 4px solid #eee;
+		padding: 0 10px;
+		margin-left: 32px;
+		margin-right: 32px;	
+		
+		font-family: Consolas, Monaco, "Andale Mono", monospace;	
+	}
+	
+	aside {
+		display: block;
+		float: right;
+		width: 390px;
+	}
+	
+	blockquote {
+		background-color: #f7f7f7;
+		border-left: 4px solid #eee;
+		
+		border-radius: 4px;
+		
+		padding-top: 4px;
+		padding-bottom: 4px;
+		padding-right:24px;
+		padding-left: 24px;
+		
+		max-width: 100%;
+		
+		margin:4px 0px 4px 32px; 
+	}
+	
+	blockquote  cite {
+		font-size: 12px;
+		line-height:18px;
+		color:#bfbfbf;
+	}
+	
+	blockquote cite:before {
+		content: '\2014 \00A0';
+	}
+
+	blockquote p {  
+		color: #666;
+		
+		margin: 0px 0px;	
+		
+		padding: 0px 0px;	
+	}
+
+	hr {
+		width: 100%;
+		text-align: left;
+		margin: 4px;
+		color: #999;
+	}
+
+	dt {
+		font-weight: bold;
+	}
+
+	dt, dd {
+		margin-top: 5px; 
+		margin-bottom: 10px; 
+	}
+
+	dd {
+		margin-left: 40px;
+	}
+
+	table {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-left: 32px;
+		max-width: 100%;
+		background-color: transparent;
+		border-collapse: collapse;
+	}
+
+	table th,
+	table td {
+		padding: 10px 16px;
+		line-height: 10px;
+		vertical-align: top;
+		border-top: 1px solid #dddddd;
+	}
+
+	table th {
+		font-weight: bold;
+		background-color: #f7f7f7;
+	}
+
+	table thead th {
+		vertical-align: bottom;
+	}
+
+	table caption + thead tr:first-child th,
+	table caption + thead tr:first-child td,
+	table colgroup + thead tr:first-child th,
+	table colgroup + thead tr:first-child td,
+	table thead:first-child tr:first-child th,
+	table thead:first-child tr:first-child td {
+		border-top: 0;
+	}
+
+	table tbody + tbody {
+		border-top: 2px solid #dddddd;
+	}
+
+	.footnote {
+		vertical-align: top;
+		position: relative;
+		top: -0.5em;
+		font-size: 0.8em;
+	}
+
+	.tooltip li {
+		line-height: 1.4;
+	}
+
+	/* Code below this line is copyright Twitter Inc. */
+
+	button,
+	input,
+	select,
+	textarea {
+		font-size: 100%;
+		margin: 0;
+		vertical-align: baseline;
+		*vertical-align: middle;
+	}
+	
+	button, input {
+		line-height: normal;
+		*overflow: visible;
+	}
+	
+	button::-moz-focus-inner, input::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+	
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		cursor: pointer;
+		-webkit-appearance: button;
+	}
+	
+	input[type=checkbox], input[type=radio] {
+		cursor: pointer;
+	}
+	
+	/* override default chrome & firefox settings */
+	input:not([type="image"]), textarea {
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+
+	input[type="search"] {
+		-webkit-appearance: textfield;
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+	
+	input[type="search"]::-webkit-search-decoration {
+		-webkit-appearance: none;
+	}
+	
+	label,
+	input,
+	select,
+	textarea {
+		font-size: 12px;
+		font-weight: normal;
+		line-height: normal;
+		margin-bottom: 18px;
+	}
+	
+	input[type=checkbox], input[type=radio] {
+		cursor: pointer;
+		margin-bottom: 0;
+	}
+	
+	input[type=text],
+	input[type=password],
+	textarea,
+	select {
+		display: inline-block;
+		width: 210px;
+		padding: 4px;
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 14px;
+		height: 18px;
+		color: #808080;
+		border: 1px solid #ccc;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	
+	select, input[type=file] {
+		height: 20px;
+		line-height: 20px;
+	}
+	
+	textarea {
+		height: auto;
+	}
+
+	/* grey out placeholders */
+	:-moz-placeholder {
+		color: #bfbfbf;
+	}
+	
+	::-webkit-input-placeholder {
+		color: #bfbfbf;
+	}
+
+	input[type=text],
+	input[type=password],
+	select,
+	textarea {
+		-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+		-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+		transition: border linear 0.2s, box-shadow linear 0.2s;
+		-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+		-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+		box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	}
+	
+	input[type=text]:focus, input[type=password]:focus, textarea:focus {
+		outline: none;
+		border-color: rgba(82, 168, 236, 0.8);
+		-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+		-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+		box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+	}
+
+	/* buttons */
+	button {
+		display: inline-block;
+		padding: 4px 14px;
+		font-size: 12px;
+		line-height: 16px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+		-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+		background-color: #0064cd;
+		background-repeat: repeat-x;
+		background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+		background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+		background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+		background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+		background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+		background-image: linear-gradient(top, #049cdb, #0064cd);
+		color: #fff;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+		border: 1px solid #004b9a;
+		border-bottom-color: #003f81;
+		-webkit-transition: 0.1s linear all;
+		-moz-transition: 0.1s linear all;
+		transition: 0.1s linear all;
+		border-color: #0064cd #0064cd #003f81;
+		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	}
+	
+	button:hover {
+		color: #fff;
+		background-position: 0 -15px;
+		text-decoration: none;
+	}
+	
+	button:active {
+		-webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+		-moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+		box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	}
+	
+	button::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	} 
+	
+	.codehilite {
+		border-left: 4px solid #eee;
+		margin-left: 32px;
+		margin-right: 32px;		
+	}
+}
+
+@media print {
+
+	@page {
+		margin: 0.5cm;
+		size:8.27in 11.69in; 
+	}
+
+	@page :left {
+		margin: 0.5cm;
+	}
+
+	@page :right {
+		margin: 0.5cm;
+	}
+	
+	html {
+	  font-family: my-open-sans; 
+	  -ms-text-size-adjust: 100%;
+	  -webkit-text-size-adjust: 100%;
+	}
+	
+	body {
+		margin: 0px;
+		font-family: my-open-sans;
+		font-size: 9pt;
+		color: #000000;
+		line-height: 1.24;
+	}
+	
+	h1, h2, h3, h4 {
+		color: #111111;
+		font-weight: 400;
+	}
+	
+	h1, h2, h3, h4, h5, p {
+		margin-bottom: 16pt;
+		padding: 0;
+	}
+	
+	h1, h2, h3, h4, h5 {
+		font-weight: bold;
+	}
+	
+	h1 {
+		font-size: 18pt;
+	}
+	
+	h2 {
+		font-size: 14pt;
+		margin: 16pt 0 6pt;
+	}
+	
+	h3 {
+		font-size: 12pt;
+	}
+	
+	h4 {
+		font-size: 11pt;
+	}
+	
+	h5 {
+		font-size: 9pt;
+	}
+		
+	ul, ol {
+		font-weight: normal;
+		margin-left: 16pt;
+	}
+			
+	img {
+		max-width: 100%;
+	}
+
+	header nav, footer {
+		display: none;
+	}
+	
+	pre {
+		border-radius: 4pt;
+		padding: 10pt 16pt;
+		white-space: pre-wrap;
+	}
+	
+	code {	
+		background-color: #f7f7f7;
+		border-left: 4pt solid #eee;
+		padding: 0 10pt;
+		margin-left: 16pt;
+		margin-right: 16pt;	
+		
+		font-family: Consolas, Monaco, "Andale Mono", monospace;	
+	}
+		
+	blockquote {
+		-webkit-print-color-adjust: exact; 
+		
+		background-color: #f7f7f7 !important;
+		border-left: 4pt solid #eee;
+		
+		border-radius: 4pt;
+		
+		padding-top: 4pt;
+		padding-bottom: 4pt;
+		padding-right:16pt;
+		padding-left: 16pt;
+		
+		margin:4pt 0pt 4pt 16pt; 
+	}
+	
+	blockquote  cite {
+		font-size: 9pt;
+		line-height:18pt;
+		color:#bfbfbf;
+	}
+	
+	blockquote cite:before {
+		content: '\2014 \00A0';
+	}
+
+	blockquote p {  
+		color: #666;
+		
+		margin: 0pt 0pt;	
+		
+		padding: 0pt 0pt;	
+	}
+	
+	
+	table {
+		margin-top: 20pt;
+		margin-bottom: 20pt;
+		margin-left: 16pt;
+		max-width: 100%;
+		background-color: transparent;
+		border-collapse: collapse;
+	}
+
+	table th,
+	table td {
+		padding: 8pt 14pt;
+		line-height: 10pt;
+		vertical-align: top;
+		border-top: 1pt solid #dddddd;
+		font-size: 9pt;
+	}
+
+	table th {
+		-webkit-print-color-adjust: exact; 
+	
+		font-weight: bold;
+		background-color: #f7f7f7 !important;
+	}
+
+	table thead th {
+		vertical-align: bottom;
+	}
+
+	table caption + thead tr:first-child th,
+	table caption + thead tr:first-child td,
+	table colgroup + thead tr:first-child th,
+	table colgroup + thead tr:first-child td,
+	table thead:first-child tr:first-child th,
+	table thead:first-child tr:first-child td {
+		border-top: 0;
+	}
+
+	table tbody + tbody {
+		border-top: 2pt solid #dddddd;
+	}
+		
+	.codehilite {
+		border-left: 4pt solid #eee;
+		margin-left: 16pt;
+		margin-right: 16pt;		
+	}	
+}
