@@ -27,6 +27,18 @@ Paragraphs can be written like so. A paragraph is the basic block of Markdown. A
 
 Paragraphs must be separated by a blank line. Basic formatting of *italics* and **bold** is supported. This *can be **nested** like* so.
 
+### Not A float
+
+info 1
+
+info 2
+
+info 3
+
+info 4
+
+--pagebreak--
+
 ## Lists
 
 ### Ordered list
@@ -38,24 +50,12 @@ Paragraphs must be separated by a blank line. Basic formatting of *italics* and 
 
 *Note: the fourth item uses the Unicode character for [Roman numeral four][2].*
 
-### Not A float
-
-info 1
-
-info 2
-
-info 3
-
-info 4
-
 ### Unordered list
 
 * An item
 * Another item
 * Yet another item
 * And there's more...
-
---pagebreak--
 
 **Python** looks like this
 
@@ -82,6 +82,8 @@ And **C** looks like this
 		return 0;
 	}
 	
+--pagebreak--
+	
 ## Paragraph modifiers
 
 ### Code block
@@ -105,6 +107,8 @@ There are six levels of headings. They correspond with the six levels of HTML he
 Of course, demonstrating what headings look like messes up the structure of the page.
 
 I don't recommend using more than three or four levels of headings here, because, when you're smallest heading isn't too small, and you're largest heading isn't too big, and you want each size up to look noticeably larger and more important, there there are only so many sizes that you can use.
+
+--pagebreak--
 
 ## URLs
 
@@ -136,3 +140,7 @@ There's actually a lot more to Markdown than this. See the official [introductio
   [3]: http://www.markitdown.net/
   [4]: http://daringfireball.net/projects/markdown/basics
   [5]: http://daringfireball.net/projects/markdown/syntax
+
+--referencerequest--
+
+--gendatefooter--

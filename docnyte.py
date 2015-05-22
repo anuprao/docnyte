@@ -20,7 +20,7 @@ fpTemplate.close()
 
 oTemplate = Template(strTemplate)
 
-mdProcessor = markdown.Markdown(output_format="html5", extensions=['extra','codehilite', 'myextension', 'floatright'])
+mdProcessor = markdown.Markdown(output_format="html5", extensions=['extra','codehilite', 'myextension', 'floatright', 'footer', 'referencerequest', 'gendatefooter'])
 html_md = mdProcessor.convert(strMarkDown)
 htmltext = oTemplate.render(markdown_content=html_md)
 

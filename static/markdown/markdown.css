@@ -457,10 +457,12 @@ html {
 @media print {
 
 	@page {
-		margin: 0.5cm;
+		margin: 1.6cm;
 		size:8.27in 11.69in; 
+		padding: 0cm;
 	}
-
+	
+	/*
 	@page :top {
 		margin: 1.0cm;
 	}
@@ -476,6 +478,7 @@ html {
 	@page :left {
 		margin: 1.0cm;
 	}	
+	*/
 	
 	html {
 	  font-family: my-open-sans; 
@@ -637,4 +640,19 @@ html {
 		margin-left: 16pt;
 		margin-right: 16pt;		
 	}	
+	
+	.divheader, .divfooter, .gendatefooter {
+         position: fixed;
+         display: block;
+         /* top: 0; */
+    }
+    
+    .divfooter {
+         bottom: +160pt;
+    }	
+    
+    .gendatefooter {
+         bottom: 0pt;
+    }    
+		
 }
