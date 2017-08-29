@@ -16,6 +16,7 @@ info 4
 
 ![Sample Image](imagesample.png)
 
+<img src="imagesample.png" alt="Sample Image" style="width: 200px;"/>
 
 This note demonstrates some of what [Markdown][1] is capable of doing.
 
